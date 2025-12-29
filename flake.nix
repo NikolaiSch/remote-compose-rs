@@ -23,28 +23,31 @@
         naersk' = pkgs.callPackage naersk { };
 
       in
-      {
-        packages = {
-          # For `nix build` & `nix run`:
-          default = naersk'.buildPackage {
-            src = ./.;
-          };
-          # Run `nix build .#check` to check code
-          check = naersk'.buildPackage {
-            src = ./.;
-            mode = "check";
-          };
-          # Run `nix build .#test` to run tests
-          test = naersk'.buildPackage {
-            src = ./.;
-            mode = "test";
-          };
-          # Run `nix build .#clippy` to lint code
-          clippy = naersk'.buildPackage {
-            src = ./.;
-            mode = "clippy";
-          };
-        };
+      rec {
+        packages =
+          let
+            crates = pkgs.lib.attrNames (
+              pkgs.lib.filterAttrs (n: v: v == "directory") (builtins.readDir ./crates)
+            );
+            mkPackage =
+              name: mode:
+              naersk'.buildPackage {
+                src = ./.;
+                inherit mode;
+                cargoBuildOptions =
+                  x:
+                  x
+                  ++ [
+                    "-p"
+                    "remote-compose-${name}"
+                  ];
+              };
+          in
+          pkgs.lib.genAttrs crates (name: {
+            check = mkPackage name "check";
+            test = mkPackage name "test";
+            clippy = mkPackage name "clippy";
+          });
 
         # For `nix develop` (optional, can be skipped):
         devShell = pkgs.mkShell {
@@ -52,7 +55,6 @@
             rustc
             cargo
             rust-analyzer
-
           ];
         };
       }

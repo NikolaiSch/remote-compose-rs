@@ -1,0 +1,27 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests\androidx_samples.rs (C:\Users\yuri\workspace\remotecompose-rs\target\debug\deps\androidx_samples-644cb86236c51f98.exe)
+
+running 1 test
+test test_color_filter1 ... FAILED
+
+failures:
+
+---- test_color_filter1 stdout ----
+--- Testing testColorFilter1 (384 bytes) ---
+
+thread 'test_color_filter1' (120312) panicked at crates\core\tests\androidx_samples.rs:13:13:
+Parsing failed for testColorFilter1: Unclosed blocks at Op Index 0.
+Current Stack IDs: [None, -2]
+Minimal Tree Structure:
+- Root
+- LayoutRoot { component_id: -2, modifiers: [MatrixSave, MatrixSave, MatrixSave, MatrixSave, LayoutBox { component_id: -3, animation_id: -1, horizontal_alignment: Center, vertical_alignment: Center, modifiers: [ModifierWidth { type_: Fill, value: Value(1.0) }, ModifierHeight { type_: Fill, value: Value(1.0) }, ModifierDrawContent { modifiers: [], children: [MatrixSave, CanvasOperations { modifiers: [ComponentValue { type_: 0, component_id: -4, value_id: 42 }, ComponentValue { type_: 1, component_id: -4, value_id: 43 }, AnimatedFloat { id: 44, values: Divide(Variable(43), Value(2.0)), animation: None }, AnimatedFloat { id: 46, values: Divide(Variable(44), Value(2.0)), animation: None }, AnimatedFloat { id: 47, values: Divide(Min(Variable(43), Variable(44)), Value(2.0)), animation: None }, PaintValues(PaintValues { changes: [Color(-16777216), StrokeWidth(Value(0.0)), TextSize(Value(12.0)), StrokeCap(0), StrokeJoin(0), Style(0), Typeface { weight: 0, italic: false, font_data: false, font_type: 0 }, BlendMode(3), RadialGradient { colors: [-8356096, -16777216], stops: [], center_x: Variable(45), center_y: Variable(46), radius: Variable(47), tile_mode: 0 }] }), DrawRect { left: Value(0.0), top: Value(0.0), right: Variable(43), bottom: Variable(44) }, DrawContent], children: [] }, MatrixSave, LayoutText { component_id: -5, animation_id: -1, text_id: 42, color: -16711936, font_size: Value(82.5), font_style: Normal, font_weight: Value(400.0), font_family_id: -1, text_align: Left, overflow: Clip, max_lines: 2147483647, modifiers: [], children: [] }, MatrixRestore, MatrixRestore] }, MatrixRestore, MatrixRestore, MatrixRestore, MatrixSave, MatrixRestore, MatrixRestore], children: [] }], children: [] } (-2)
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    test_color_filter1
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test androidx_samples`

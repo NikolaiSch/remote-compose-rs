@@ -1,0 +1,20 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests\androidx_samples.rs (C:\Users\yuri\workspace\remotecompose-rs\target\debug\deps\androidx_samples-644cb86236c51f98.exe)
+
+running 1 test
+--- Testing testColorFilter2 (8481 bytes) ---
+DEBUG: DataPath ID: 47, Len: 80, Hex: [FF, 80, 00, 0A, 42, E6, AF, 1B, 43, 3C, 03, D7, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 3C, 03, D7, 42, D8, A2, 4E, 43, 3C, 03, D7, 42, CD, 33, B7, 43, 41, BB, 23, 42, CD, 33, B7, 43, 48, C1, 89, FF, 80, 00, 0E, 42, CD, 33, B7, 43, 48, C1, 89, 42, CD, 33, B7, 43, 4F, C7, EF, 42, D8, A2, 4F, 43, 55, 7F, 3B, 42, E6, AF, 1B, 43, 55, 7F, 3B, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 55, 7F, 3B, 42, F4, BC, 6B, 43, 55, 7F, 3B, 43, 00, 15, 81, 43, 4F, C7, EF, 43, 00, 15, 81, 43, 48, C1, 89, FF, 80, 00, 0E, 43, 00, 15, 81, 43, 48, C1, 89, 43, 00, 15, 81, 43, 41, BB, 23, 42, F4, BC, 6A, 43, 3C, 03, D7, 42, E6, AF, 1B, 43, 3C, 03, D7, FF, 80, 00, 0F, FF, 80, 00, 0A, 42, E6, AF, 1B, 43, 4D, 7F, 3B, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 4D, 7F, 3B, 42, E1, 74, BD, 43, 4D, 7F, 3B, 42, DD, 33, B7, 43, 4B, 5E, B8, 42, DD, 33, B7, 43, 48, C1, 89, FF, 80, 00, 0E, 42, DD, 33, B7, 43, 48, C1, 89, 42, DD, 33, B7, 43, 46, 24, 5A, 42, E1, 74, BD, 43, 44, 03, D7, 42, E6, AF, 1B, 43, 44, 03, D7, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 44, 03, D7, 42, EB, E9, FC, 43, 44, 03, D7, 42, F0, 2B, 02, 43, 46, 24, 5A, 42, F0, 2B, 02, 43, 48, C1, 89, FF, 80, 00, 0E, 42, F0, 2B, 02, 43, 48, C1, 89, 42, F0, 2B, 02, 43, 4B, 5E, B8, 42, EB, E9, FC, 43, 4D, 7F, 3B, 42, E6, AF, 1B, 43, 4D, 7F, 3B, FF, 80, 00, 0F]
+
+thread 'test_color_filter2' (122308) panicked at crates\core\tests\androidx_samples.rs:18:13:
+Parsing failed for testColorFilter2: Read error at Op Index 37: Invalid DataPath data: Failed to read RemotePath: () Hex: [FF, 80, 00, 0A, 42, E6, AF, 1B, 43, 3C, 03, D7, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 3C, 03, D7, 42, D8, A2, 4E, 43, 3C, 03, D7, 42, CD, 33, B7, 43, 41, BB, 23, 42, CD, 33, B7, 43, 48, C1, 89, FF, 80, 00, 0E, 42, CD, 33, B7, 43, 48, C1, 89, 42, CD, 33, B7, 43, 4F, C7, EF, 42, D8, A2, 4F, 43, 55, 7F, 3B, 42, E6, AF, 1B, 43, 55, 7F, 3B, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 55, 7F, 3B, 42, F4, BC, 6B, 43, 55, 7F, 3B, 43, 00, 15, 81, 43, 4F, C7, EF, 43, 00, 15, 81, 43, 48, C1, 89, FF, 80, 00, 0E, 43, 00, 15, 81, 43, 48, C1, 89, 43, 00, 15, 81, 43, 41, BB, 23, 42, F4, BC, 6A, 43, 3C, 03, D7, 42, E6, AF, 1B, 43, 3C, 03, D7, FF, 80, 00, 0F, FF, 80, 00, 0A, 42, E6, AF, 1B, 43, 4D, 7F, 3B, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 4D, 7F, 3B, 42, E1, 74, BD, 43, 4D, 7F, 3B, 42, DD, 33, B7, 43, 4B, 5E, B8, 42, DD, 33, B7, 43, 48, C1, 89, FF, 80, 00, 0E, 42, DD, 33, B7, 43, 48, C1, 89, 42, DD, 33, B7, 43, 46, 24, 5A, 42, E1, 74, BD, 43, 44, 03, D7, 42, E6, AF, 1B, 43, 44, 03, D7, FF, 80, 00, 0E, 42, E6, AF, 1B, 43, 44, 03, D7, 42, EB, E9, FC, 43, 44, 03, D7, 42, F0, 2B, 02, 43, 46, 24, 5A, 42, F0, 2B, 02, 43, 48, C1, 89, FF, 80, 00, 0E, 42, F0, 2B, 02, 43, 48, C1, 89, 42, F0, 2B, 02, 43, 4B, 5E, B8, 42, EB, E9, FC, 43, 4D, 7F, 3B, 42, E6, AF, 1B, 43, 4D, 7F, 3B, FF, 80, 00, 0F]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test test_color_filter2 ... FAILED
+
+failures:
+
+failures:
+    test_color_filter2
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test androidx_samples`

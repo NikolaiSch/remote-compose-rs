@@ -1,0 +1,53 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running `C:\Users\yuri\workspace\remotecompose-rs\target\debug\examples\inspect.exe examples/color_filter1.rc`
+Read 384 bytes.
+Document Structure:
+
+
+Flat list of operations:
+Document parsing failed: Unclosed blocks at Op Index 0.
+Current Stack IDs: [None, -2]
+Minimal Tree Structure:
+- Root
+Offset 0: Header { major: 1, minor: 1, patch: 0, metadata: {5: Int(715), 6: Int(825), 9: String(""), 14: Int(512)} } (49 bytes)
+Offset 49: DataText { id: 42, text: "Green" } (14 bytes)
+Offset 63: LayoutRoot { component_id: -2, modifiers: [], children: [] } (5 bytes)
+Offset 68: MatrixSave (1 bytes)
+Offset 69: MatrixSave (1 bytes)
+Offset 70: MatrixSave (1 bytes)
+Offset 71: MatrixSave (1 bytes)
+- LayoutRoot { component_id: -2, modifiers: [MatrixSave, MatrixSave, MatrixSave, MatrixSave, LayoutBox { component_id: -3, animation_id: -1, horizontal_alignment: Center, vertical_alignment: Center, modifiers: [ModifierWidth { type_: Fill, value: Value(1.0) }, ModifierHeight { type_: Fill, value: Value(1.0) }, ModifierDrawContent { modifiers: [], children: [MatrixSave, CanvasOperations { modifiers: [ComponentValue { type_: 0, component_id: -4, value_id: 42 }, ComponentValue { type_: 1, component_id: -4, value_id: 43 }, AnimatedFloat { id: 44, values: Divide(Variable(43), Value(2.0)), animation: None }, AnimatedFloat { id: 46, values: Divide(Variable(44), Value(2.0)), animation: None }, AnimatedFloat { id: 47, values: Divide(Min(Variable(43), Variable(44)), Value(2.0)), animation: None }, PaintValues(PaintValues { changes: [Color(-16777216), StrokeWidth(Value(0.0)), TextSize(Value(12.0)), StrokeCap(0), StrokeJoin(0), Style(0), Typeface { weight: 0, italic: false, font_data: false, font_type: 0 }, BlendMode(3), RadialGradient { colors: [-8356096, -16777216], stops: [], center_x: Variable(45), center_y: Variable(46), radius: Variable(47), tile_mode: 0 }] }), DrawRect { left: Value(0.0), top: Value(0.0), right: Variable(43), bottom: Variable(44) }, DrawContent], children: [] }, MatrixSave, LayoutText { component_id: -5, animation_id: -1, text_id: 42, color: -16711936, font_size: Value(82.5), font_style: Normal, font_weight: Value(400.0), font_family_id: -1, text_align: Left, overflow: Clip, max_lines: 2147483647, modifiers: [], children: [] }, MatrixRestore, MatrixRestore] }, MatrixRestore, MatrixRestore, MatrixRestore, MatrixSave, MatrixRestore, MatrixRestore], children: [] }], children: [] } (-2)
+
+Falling back to flat inspection.
+Offset 72: LayoutBox { component_id: -3, animation_id: -1, horizontal_alignment: Center, vertical_alignment: Center, modifiers: [], children: [] } (17 bytes)
+Offset 89: ModifierWidth { type_: Fill, value: Value(1.0) } (9 bytes)
+Offset 98: ModifierHeight { type_: Fill, value: Value(1.0) } (9 bytes)
+Offset 107: ModifierDrawContent { modifiers: [], children: [] } (1 bytes)
+Offset 108: LayoutContent { component_id: -4 } (5 bytes)
+Offset 113: MatrixSave (1 bytes)
+Offset 114: CanvasOperations { modifiers: [], children: [] } (1 bytes)
+Offset 115: ComponentValue { type_: 0, component_id: -4, value_id: 42 } (13 bytes)
+Offset 128: ComponentValue { type_: 1, component_id: -4, value_id: 43 } (13 bytes)
+Offset 141: AnimatedFloat { id: 44, values: Divide(Variable(43), Value(2.0)), animation: None } (21 bytes)
+Offset 162: AnimatedFloat { id: 46, values: Divide(Variable(44), Value(2.0)), animation: None } (21 bytes)
+Offset 183: AnimatedFloat { id: 47, values: Divide(Min(Variable(43), Variable(44)), Value(2.0)), animation: None } (29 bytes)
+Offset 212: PaintValues(PaintValues { changes: [Color(-16777216), StrokeWidth(Value(0.0)), TextSize(Value(12.0)), StrokeCap(0), StrokeJoin(0), Style(0), Typeface { weight: 0, italic: false, font_data: false, font_type: 0 }, BlendMode(3), RadialGradient { colors: [-8356096, -16777216], stops: [], center_x: Variable(45), center_y: Variable(46), radius: Variable(47), tile_mode: 0 }] }) (89 bytes)
+Offset 301: DrawRect { left: Value(0.0), top: Value(0.0), right: Variable(43), bottom: Variable(44) } (17 bytes)
+Offset 318: DrawContent (1 bytes)
+Offset 319: ContainerEnd(ContainerEnd) (1 bytes)
+Offset 320: MatrixSave (1 bytes)
+Offset 321: LayoutText { component_id: -5, animation_id: -1, text_id: 42, color: -16711936, font_size: Value(82.5), font_style: Normal, font_weight: Value(400.0), font_family_id: -1, text_align: Left, overflow: Clip, max_lines: 2147483647, modifiers: [], children: [] } (45 bytes)
+Offset 366: LayoutContent { component_id: -6 } (5 bytes)
+Offset 371: ContainerEnd(ContainerEnd) (1 bytes)
+Offset 372: ContainerEnd(ContainerEnd) (1 bytes)
+Offset 373: MatrixRestore (1 bytes)
+Offset 374: MatrixRestore (1 bytes)
+Offset 375: ContainerEnd(ContainerEnd) (1 bytes)
+Offset 376: ContainerEnd(ContainerEnd) (1 bytes)
+Offset 377: MatrixRestore (1 bytes)
+Offset 378: MatrixRestore (1 bytes)
+Offset 379: MatrixRestore (1 bytes)
+Offset 380: MatrixSave (1 bytes)
+Offset 381: MatrixRestore (1 bytes)
+Offset 382: MatrixRestore (1 bytes)
+Offset 383: ContainerEnd(ContainerEnd) (1 bytes)

@@ -1,0 +1,18 @@
+[package]
+name = "remote-compose-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description.workspace = true
+
+[dependencies]
+remote-compose-expressions = { path = "../expressions" }
+
+[dev-dependencies]
+pretty_assertions = "1.4.0"
+
+[[example]]
+name = "inspect"
+path = "examples/inspect.rs"

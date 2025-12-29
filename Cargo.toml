@@ -1,6 +1,14 @@
-[package]
-name = "remote-compose-rs"
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/expressions"]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+authors = ["Nikolai Schimke"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/nikolaisch/remotecompose-rs"
+description = "A UI Toolkit for Remote Compose"
 
-[dependencies]
+[workspace.dependencies]
+# Dependencies will be added as needed
