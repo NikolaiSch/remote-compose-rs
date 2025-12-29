@@ -43,11 +43,22 @@
                   ];
               };
           in
-          pkgs.lib.genAttrs crates (name: {
-            check = mkPackage name "check";
-            test = mkPackage name "test";
-            clippy = mkPackage name "clippy";
-          });
+          pkgs.lib.listToAttrs (
+            pkgs.lib.concatMap (name: [
+              {
+                name = "check-${name}";
+                value = mkPackage name "check";
+              }
+              {
+                name = "test-${name}";
+                value = mkPackage name "test";
+              }
+              {
+                name = "clippy-${name}";
+                value = mkPackage name "clippy";
+              }
+            ]) crates
+          );
 
         # For `nix develop` (optional, can be skipped):
         devShell = pkgs.mkShell {
