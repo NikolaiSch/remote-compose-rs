@@ -7,10 +7,10 @@ The primary focus is on **loading and playing** Remote Compose documents. It aim
 ## Using the nix flake
 The nix flake exports a number of useful targets for each crate:
 
-- `check-$crate` - A target for running `cargo check` (no executable is built)
-- `test-$crate` - A target for running `cargo test` (no executable is built)
-- `clippy-$crate` - A target for running `cargo clippy` (no executable is built)
-- `example-$crate-$example` - A target for running `cargo run --example` (an executable is built)
+- `$crate-check` - A target for running `cargo check` (no executable is built)
+- `$crate-test` - A target for running `cargo test` (no executable is built)
+- `$crate-clippy` - A target for running `cargo clippy` (no executable is built)
+- `$crate-example-$example` - A target for running `cargo run --example` (an executable is built)
 
 For the root crate, there is also:
 - `devShell` - A target for a dev shell, which you can use with `nix develop`
